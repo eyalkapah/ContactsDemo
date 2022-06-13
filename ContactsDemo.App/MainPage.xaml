@@ -55,8 +55,25 @@
 
             <ComboBox
                 Width="150"
+                BorderThickness="1"
+                CornerRadius="4"
                 ItemsSource="{x:Bind Vm.SortingMethods, Mode=OneWay}"
                 SelectedItem="{x:Bind Vm.SelectedSortingMethod, Mode=TwoWay}" />
+
+            <Border
+                Width="2"
+                Height="30"
+                Margin="16,0,0,0"
+                BorderBrush="LightGray"
+                BorderThickness="1"
+                CornerRadius="2" />
+
+            <CheckBox
+                Margin="8,0,0,0"
+                BorderBrush="LightGray"
+                BorderThickness="1"
+                Content="Filter non-personal"
+                IsChecked="{x:Bind Vm.IsFiltered, Mode=TwoWay}" />
         </StackPanel>
 
 

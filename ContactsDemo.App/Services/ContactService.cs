@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Windows.ApplicationModel.Contacts;
-using Windows.UI.Xaml.Media.Imaging;
 using Contact = ContactsDemo.App.Models.Contact;
 
 namespace ContactsDemo.App.Services
@@ -18,7 +16,7 @@ namespace ContactsDemo.App.Services
 
             foreach (var contact in contacts)
             {
-                
+
                 yield return new Contact
                 {
                     FirstName = contact.FirstName,
@@ -26,7 +24,7 @@ namespace ContactsDemo.App.Services
                     FullName = contact.FullName,
                     Email = contact.Emails.FirstOrDefault()?.Address ?? string.Empty,
                     SourceDisplayPicture = contact.SourceDisplayPicture
-                    
+
 
                 };
             }
